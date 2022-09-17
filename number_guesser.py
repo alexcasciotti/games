@@ -21,11 +21,4 @@ def guess(x):
             print('Congrats, you win!')
 
 
-exit = 0
-while(exit == 0):
-    try:    
-        upper_bound = int(input('You get 3 lives...\nEnter an upper bound: '))
-        guess(upper_bound)
-        exit = 1
-    except ValueError:
-        print('The upper bound must be an integer.')
+
