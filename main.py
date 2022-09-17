@@ -13,10 +13,7 @@ while(exit == 0):
     if(user_game_choice == 0):
         exit = 1
     if(user_game_choice == 1):
-        print(madlibs.build_story())
-        advance = input('Continue? (Y or N)').lower()
-        if(advance == 'n'):
-            exit = 1
+        madlibs.start()
     if(user_game_choice == 2):
         exit = 0
         while(exit == 0):

@@ -25,4 +25,3 @@ def build_story():
         new_story += story[index]
         index += 1     
     return new_story
-start()
