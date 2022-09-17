@@ -19,6 +19,6 @@ def guess(x):
             print('Wrong!\nTry higher...\n')
     if(lives > 0):
         print('Congrats, you win!')
-        
 
-guess(1000)
+upper_bound = int(input('You get 3 lives...\nEnter an upper bound: '))
+guess(upper_bound)
