@@ -1,12 +1,13 @@
 import madlibs
 import number_guesser
 import rock_paper_scissors
+import os
 
 def main():
-    exit = 0
+    exit = 0 #controls the exit status of the 'game screen'
     while(exit == 0):
-        game_choices = {1 : 'madlibs.py', 2 : 'number_guesser.py', 3 : 'rock_paper_scissors.py'}
-        print(f'Alex\'s Games:\n')
+        game_choices = {1 : 'Madlibs', 2 : 'Number guesser', 3 : 'Rock paper scissors'}
+        print('Games:\n')
         for x in game_choices:
             print(f'{x} : {game_choices[x]}\n')
         user_game_choice = input('What game would you like to play?\nSelect the game number(0 to exit) and press \'Enter\' to begin...\n')
@@ -17,9 +18,9 @@ def main():
                 madlibs.start()
             if(user_game_choice == '2'):
                 print('Welcome to Number Guessor!\n')
-                user_difficulty = input('Enter difficulty...\n(\'1\'(3 lives), \'2\'(6 lives), \'3\'(9 lives):\n')
-                if(user_difficulty == '1' or user_difficulty == '2' or user_difficulty == '3' or user_difficulty == '0'):
-                    upper_bound = input('Type an upper bound and press \'Enter\' to begin...\n')
+                user_difficulty = input('Enter difficulty...\n(\'1\' = 3 lives, \'2\' = 6 lives, \'3\' = 9 lives)\n')
+                if(user_difficulty == '1' or user_difficulty == '2' or user_difficulty == '3'):
+                    upper_bound = input('Guess a number from 1 to x!\nEnter your \'x\' and press \'Enter\' to begin...\n')
                     try:
                         upper_bound = int(upper_bound)
                         number_guesser.guess(upper_bound, user_difficulty)
@@ -34,4 +35,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
