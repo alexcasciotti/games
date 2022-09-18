@@ -1,7 +1,6 @@
 import madlibs
 import number_guesser
 import rock_paper_scissors
-import os
 
 def main():
     exit = 0 #controls the exit status of the 'game screen'
