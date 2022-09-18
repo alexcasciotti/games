@@ -1,7 +1,7 @@
 import random
 
 def guess(x):
-        lives = 3
+        lives = 10
         random_number = random.randint(1,x)
         guess = 0
         while(guess != random_number):
